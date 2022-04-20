@@ -30,7 +30,7 @@ public class TesteOrionSIC {
        
     }
     @Test
-    public void loginCadastroViaOrion()throws InterruptedException{
+    public void loginSicViaOrion()throws InterruptedException{
         String email = "gustavo@febrafar.com.br";
         String senha = "Gustavo.1204";
         homePage.preencherEmail(email);
