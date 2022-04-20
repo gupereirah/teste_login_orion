@@ -9,30 +9,30 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import teste_login_orion.pages.PaginaInicialPai;
+import teste_login_orion.pages.PaginaInicialTrade;
 
-public class TestePai {
+public class TesteTrade {
     WebDriver driver;
-    PaginaInicialPai paginaInicialPai;
+    PaginaInicialTrade paginaInicialTrade;
 
     @Before
     public void setup() {
         driver = new ChromeDriver();
-        paginaInicialPai = new PaginaInicialPai(driver);
+        paginaInicialTrade = new PaginaInicialTrade(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();//Maximizar Tela
-        driver.get("https://paifebrafar.com.br");
+        driver.get("https://trademktfebrafar.com.br");
 
     }
 
     @Test
     public void testePositivoCadastro()throws InterruptedException {
-        String login = "ericnagao";
-        String senha = "123456";
-        paginaInicialPai.preencherLogin(login);
-        paginaInicialPai.preencherSenha(senha);
+        String login = "gustavo@febrafar.com.br";
+        String senha = "Gustavo.1204";
+        paginaInicialTrade.preencherLogin(login);
+        paginaInicialTrade.preencherSenha(senha);
         Thread.sleep(10000);
-        paginaInicialPai.clicarEntrar();
+        paginaInicialTrade.clicarEntrar();
         Thread.sleep(5000);
         //Assert.assertTrue(driver.getPageSource().contains("Seja bem-vindo ao Sistema PAI."));
        }

@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class PaginaInicialPai{
+public class PaginaInicialTrade{
 
     WebDriver driver;
 
     String LOGIN = "//input[@id='Username']";
     String SENHA = "//input[@id='Password']";
-    String ENTRAR = "//button[contains(text(),'Entrar')]";
+    String ENTRAR = "//span[contains(text(),'Entrar')]";
 
-    public PaginaInicialPai(WebDriver driverParametro){
+    public PaginaInicialTrade(WebDriver driverParametro){
         this.driver = driverParametro;
     }
 
