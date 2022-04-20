@@ -42,14 +42,14 @@ public class TesteOrionPai {
         Thread.sleep(5000);
         paginaInicial.clickSolucoes();
         Thread.sleep(5000);
-        paginaInicial.clickTrade();
+        paginaInicial.clickPai();
         Thread.sleep(5000);
         Object[] janelas = driver.getWindowHandles().toArray(); // Estou mapeando as jenlas que estão abertas
-        driver.switchTo().window(janelas[1].toString());// faz a troca de fato
+        driver.switchTo().window(janelas[1].toString());// faz a troca de janela
         Thread.sleep(5000);
         paginaInicialPai.preencherLogin("ericnagao");
         paginaInicialPai.preencherSenha("123456");
-        Thread.sleep(10000);//Pausa para validar o Captcha
+        Thread.sleep(20000);//Pausa para validar o Captcha
         paginaInicialPai.clicarEntrar();
         Thread.sleep(5000);
 

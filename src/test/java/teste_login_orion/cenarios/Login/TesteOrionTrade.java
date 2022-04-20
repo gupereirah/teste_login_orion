@@ -49,7 +49,7 @@ public class TesteOrionTrade {
         Thread.sleep(5000);
         paginaInicialTrade.preencherLogin(email);
         paginaInicialTrade.preencherSenha(senha);
-        Thread.sleep(10000);//Pausa para validar o Captcha
+        Thread.sleep(20000);//Pausa para validar o Captcha
         paginaInicialTrade.clicarEntrar();
         Thread.sleep(5000);
 
