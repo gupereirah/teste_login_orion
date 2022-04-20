@@ -1,7 +1,5 @@
 package teste_login_orion.pages;
 
-//import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -12,6 +10,8 @@ public class PaginaInicial {
     String SOLUCOES = "//span[contains(text(),'SOLUÇÕES')]";
     String BOTAOCADASTRO = "//body/app-root[1]/app-main[1]/div[1]/app-topbar[1]/div[1]/ul[1]/li[2]/app-config[1]/p-sidebar[1]/div[1]/div[1]/ul[1]/li[3]/a[1]/img[1]";
     String BOTAOSIC = "//body/app-root[1]/app-main[1]/div[1]/app-topbar[1]/div[1]/ul[1]/li[2]/app-config[1]/p-sidebar[1]/div[1]/div[1]/ul[1]/li[2]/a[1]/img[1]";
+    String BOTAOPAI = "//body/app-root[1]/app-main[1]/div[1]/app-topbar[1]/div[1]/ul[1]/li[2]/app-config[1]/p-sidebar[1]/div[1]/div[1]/ul[1]/li[8]/a[1]/img[1]";
+    String BOTAOTRADE = "//body/app-root[1]/app-main[1]/div[1]/app-topbar[1]/div[1]/ul[1]/li[2]/app-config[1]/p-sidebar[1]/div[1]/div[1]/ul[1]/li[4]/a[1]/img[1]";
 
     public PaginaInicial(WebDriver driverParametro){
         this.driver = driverParametro;
@@ -24,6 +24,12 @@ public class PaginaInicial {
     }
     public void clickSic(){
         driver.findElement(By.xpath(BOTAOSIC)).click();
+    }
+    public void clickPai(){
+        driver.findElement(By.xpath(BOTAOPAI)).click();
+    }
+    public void clickTrade(){
+        driver.findElement(By.xpath(BOTAOTRADE)).click();
     }
 
 }

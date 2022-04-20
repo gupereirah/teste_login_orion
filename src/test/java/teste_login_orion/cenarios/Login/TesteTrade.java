@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import teste_login_orion.pages.HomePage;
 
-public class TesteOrionPai {
+public class TesteTrade {
     WebDriver driver;
     HomePage homePage;
 

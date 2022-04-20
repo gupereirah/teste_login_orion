@@ -1,10 +1,8 @@
 package teste_login_orion.cenarios.Login;
 
-//import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
-//import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +23,6 @@ public class TesteOrionSIC {
         driver = new ChromeDriver();
         paginaInicial = new PaginaInicial(driver);
         homePage = new HomePage(driver);
-        paginaInicial = new PaginaInicial(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();//Maximizar Tela
         driver.get("https://orionfebrafar.com.br");
@@ -63,7 +60,7 @@ public class TesteOrionSIC {
     }
     @After
     public void finalizar() throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(10000);
         driver.quit();
 
     }

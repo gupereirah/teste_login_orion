@@ -3,7 +3,7 @@ package teste_login_orion.cenarios.Login;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
-import org.junit.Assert;
+//import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -40,13 +40,15 @@ public class TesteOrionCadastro {
         paginaInicial.clickSolucoes();
         Thread.sleep(5000);
         paginaInicial.clickCadastro();
-        Assert.assertTrue(driver.getCurrentUrl().equals("https://homologa.orionfbrafar.com.br/"));
-
-
+        //Object[] janelas = driver.getWindowHandles().toArray(); // Estou mapeando as jenlas que estão abertas
+        //driver.switchTo().window(janelas[1].toString());// faz a troca de fato
+        //Thread.sleep(10000);
+        //System.out.println(driver.getCurrentUrl());
+        //Assert.assertTrue(driver.getCurrentUrl().equals("https://cadastrofebrafar.com.br/#/"));
     }
     @After
     public void finalizar() throws InterruptedException {
-        Thread.sleep(30000);
+        Thread.sleep(20000);
         driver.quit();
 
     }
