@@ -9,32 +9,33 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import teste_login_orion.pages.HomePage;
+import teste_login_orion.pages.PaginaInicialPai;
 
-public class TesteTrade {
+public class TestePai {
     WebDriver driver;
-    HomePage homePage;
+    PaginaInicialPai paginaInicialPai;
 
     @Before
     public void setup() {
         driver = new ChromeDriver();
-        homePage = new HomePage(driver);
+        paginaInicialPai = new PaginaInicialPai(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();//Maximizar Tela
-        driver.get("https://orionfebrafar.com.br");
+        driver.get("https://paifebrafar.com.br");
 
     }
 
     @Test
-    public void testePositivoCadastro() {
-        String email = "gustavo@febrafar.com.br";
-        String senha = "Gustavo.1204";
-        homePage.preencherEmail(email);
-        homePage.preencherSenha(senha);
-        homePage.clicarAcessar();
-    //    Assert.assertTrue(driver.getPageSource().contains("Bem-vindo(a),"));
-
-    }
+    public void testePositivoCadastro()throws InterruptedException {
+        String login = "ericnagao";
+        String senha = "123456";
+        paginaInicialPai.preencherLogin(login);
+        paginaInicialPai.preencherSenha(senha);
+        Thread.sleep(10000);
+        paginaInicialPai.clicarEntrar();
+        Thread.sleep(5000);
+        //Assert.assertTrue(driver.getPageSource().contains("Seja bem-vindo ao Sistema PAI."));
+       }
 
     @After
     public void finalizar() throws InterruptedException {
