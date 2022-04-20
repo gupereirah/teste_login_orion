@@ -26,7 +26,7 @@ public class TestePai {
     }
 
     @Test
-    public void testePositivoCadastro()throws InterruptedException {
+    public void testePositivoPai()throws InterruptedException {
         String login = "ericnagao";
         String senha = "123456";
         paginaInicialPai.preencherLogin(login);

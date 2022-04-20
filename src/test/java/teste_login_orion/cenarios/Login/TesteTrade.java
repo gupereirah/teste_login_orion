@@ -26,7 +26,7 @@ public class TesteTrade {
     }
 
     @Test
-    public void testePositivoCadastro()throws InterruptedException {
+    public void testePositivoTrade()throws InterruptedException {
         String login = "gustavo@febrafar.com.br";
         String senha = "Gustavo.1204";
         paginaInicialTrade.preencherLogin(login);
